@@ -17,7 +17,8 @@ resource "aws_ecs_service" "atlantis_ecs_service" {
 
   load_balancer {
     container_name   = "${var.application_name}"
-    container_port   = 80
+    container_port   = 8080
+
     elb_name       = "${aws_elb.atlaniz-dmz-elb.name}"
   }
 
